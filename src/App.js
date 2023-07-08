@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectPosts, selectPostsError } from './reducers';
+import Post from './components/Post/Post';
+import { fetchPosts } from './actions';
 import './App.css';
 
 function App() {
+  const dispatch = useDispatch();
+  const posts = useSelector(selectPosts);
+  const error = useSelector(selectPostsError);
+
+  useEffect(() => {
+    fetchPosts(dispatch);
+  }, [dispatch]);
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <h1>Reddit App</h1>
+      {posts.map(post => (
+        <Post key={post.id} post={post} />
+      ))}
     </div>
   );
 }
