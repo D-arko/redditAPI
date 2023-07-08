@@ -12,7 +12,7 @@
   .video-container {
     margin: auto;
     background-color: #222224;
-    box-shadow: 0 4px 8px rgb(255, 255, 255);
+    box-shadow: 4px 4px 4px 4px rgb(255, 255, 255);
     border-radius: 4px;
     overflow: hidden;
     width: 40%;
@@ -48,6 +48,7 @@
       width: 100%;
     }
     .video-container video {
+      padding: 0px;
       height: 100%;
       width: 100%;
     }
