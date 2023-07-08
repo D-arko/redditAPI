@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -37,10 +37,13 @@
   }
 }
 
-.container {
-  margin: 0 auto;
-  /* background-color: red; */
-  max-width: 75%;
+*/
+body {
+  margin: auto;
+  text-align: center;
+  background-color: black;
 }
 
-
+h1 {
+  color: red
+}

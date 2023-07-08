@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className='container'>
-      <h1>Reddit App</h1>
+      <h1>Reddit API App</h1>
       {posts.map(post => (
         <Post key={post.id} post={post} />
       ))}

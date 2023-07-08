@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import App from './App';
 import postsSliceReducer from './reducers';
+import './index.css';
 
 const store = configureStore({
   reducer: postsSliceReducer,
