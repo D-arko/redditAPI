@@ -21,7 +21,13 @@ function App() {
   return (
     <div className='container'>
       <h1>Reddit API App</h1>
-      {posts.map(post => (
+      <h3 style={{ color: 'white', marginBottom: 20 }}>
+        Project Folder on GitHub:{' '}
+        <a href='https://github.com/d-arko/redditapi'>
+          Reddit API GitHub
+        </a>
+      </h3>
+      {posts.map((post) => (
         <Post key={post.id} post={post} />
       ))}
     </div>
